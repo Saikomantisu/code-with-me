@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta tags for character set and viewport -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Title of the web page -->
+		<title>Code With Me</title>
+
+		<!-- External JavaScript files (defer attribute ensures they are executed after HTML parsing) -->
+		<script defer src="./js/main.js"></script>
+		<script defer src="https://www.youtube.com/iframe_api"></script>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/axios@1.6.2/dist/axios.min.js"
+		></script>
+
+		<!-- External stylesheet link -->
+		<link rel="stylesheet" href="./style/main.css" />
+
+		<!-- Shortcut icon for the web page -->
+		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+		/>
+	</head>
+	<body>
+		<!-- noscript tag provides a message if JavaScript is disabled -->
+		<noscript>You need to enable JavaScript to run this app.</noscript>
+
+		<!-- Navigation bar -->
+		<nav class="navbar">
+			<center>
+				<a href="/index.html" class="logo">
+					<img src="./assets/logo-light.png" alt="logo" height="30px" />
+				</a>
+			</center>
+		</nav>
+
+		<!-- Player section -->
+		<div class="player" tabindex="-1">
+			<div class="yt-player" id="yt_player" tabindex="-1"></div>
+		</div>
+
+		<div class="daily-motivation">
+			<p class="quote"></p>
+			<h3 class="quote-title" id="quote_title"></h3>
+			<p class="quote-title" id="quote_author"></p>
+		</div>
+
+		<!-- Controls section -->
+		<div class="controls">
+			<div class="close-open-btn controls-close-btn">
+				<button class="icon-btn" type="button" id="controls_close_btn">
+					<i class="bi bi-caret-right-fill"></i>
+				</button>
+			</div>
+
+			<div class="time">
+				<p id="disply_time"></p>
+			</div>
+
+			<div class="change-space">
+				<p>Change Space</p>
+
+				<div class="skip-btns">
+					<button class="icon-btn" type="button" id="previous_btn">
+						<i class="bi bi-chevron-left"></i>
+					</button>
+					<button class="icon-btn" type="button" id="next_btn">
+						<i class="bi bi-chevron-right"></i>
+					</button>
+				</div>
+			</div>
+
+			<div class="spotify-playlist">
+				<iframe
+					style="border-radius: 12px"
+					src="https://open.spotify.com/embed/playlist/1BMHIMvs4qSYDJmPqHwMXe?utm_source=generator"
+					width="100%"
+					height="152"
+					frameborder="0"
+					allowfullscreen=""
+					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+					loading="lazy"
+				></iframe>
+			</div>
+
+			<div class="audio-control">
+				<button class="icon-btn speaker-icon" type="button" id="mute_btn">
+					<i class="bi bi-volume-mute-fill"></i>
+				</button>
+
+				<div class="audio-slider">
+					<input
+						type="range"
+						min="1"
+						max="100"
+						value="0"
+						class="slider"
+						id="volume_slider"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<!-- Screen size not compatibale -->
+		<h1 class="error">Screen size not compatibale</h1>
+	</body>
+</html>
